@@ -321,6 +321,16 @@ config TARGET_MX6SABRESD
 	select SUPPORT_SPL
 	imply CMD_DM
 
+config TARGET_MX6ICB
+	bool "mx6ICB"
+	select BOARD_EARLY_INIT_F
+	select BOARD_LATE_INIT
+	select DM
+	select DM_THERMAL
+	select MX6QDL
+	select SUPPORT_SPL
+	imply CMD_DM
+
 config TARGET_MX6SLEVK
 	bool "mx6slevk"
 	select MX6SL
@@ -621,5 +631,6 @@ source "board/udoo/Kconfig"
 source "board/udoo/neo/Kconfig"
 source "board/wandboard/Kconfig"
 source "board/warp/Kconfig"
+source "board/naimtechnology/mx6icb/Kconfig"
 
 endif
