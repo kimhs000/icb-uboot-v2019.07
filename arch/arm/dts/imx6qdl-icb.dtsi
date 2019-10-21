@@ -115,18 +115,18 @@
 };
 
 &ecspi1 {
-	cs-gpios = <&gpio4 9 0>;
+	cs-gpios = <&gpio2 30 0>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_ecspi1>;
 	status = "okay";
-
+/*
 	flash: m25p80@0 {
 		#address-cells = <1>;
 		#size-cells = <1>;
 		compatible = "st,m25p32", "jedec,spi-nor";
 		spi-max-frequency = <20000000>;
 		reg = <0>;
-	};
+	};*/
 };
 
 &fec {
@@ -282,17 +282,15 @@
 				MX6QDL_PAD_NANDF_D3__GPIO2_IO03 0x1b0b0
 				MX6QDL_PAD_GPIO_0__CCM_CLKO1    0x130b0
 				MX6QDL_PAD_NANDF_CLE__GPIO6_IO07 0x1b0b0
-				MX6QDL_PAD_ENET_TXD1__GPIO1_IO29 0x1b0b0
-				MX6QDL_PAD_EIM_D22__GPIO3_IO22  0x1b0b0
 				MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x1b0b0
 			>;
 		};
 
 		pinctrl_ecspi1: ecspi1grp {
 			fsl,pins = <
-				MX6QDL_PAD_EIM_D17__ECSPI1_MISO		0x100b1
-				MX6QDL_PAD_EIM_D18__ECSPI1_MOSI		0x100b1
-				MX6QDL_PAD_EIM_D16__ECSPI1_SCLK		0x100b1
+				MX6QDL_PAD_EIM_D17__ECSPI1_MISO		0x100b0
+				MX6QDL_PAD_EIM_D18__ECSPI1_MOSI		0x100b0
+				MX6QDL_PAD_EIM_D16__ECSPI1_SCLK		0x100b0
 				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x1b0b0
 			>;
 		};
@@ -334,8 +332,8 @@
 
 		pinctrl_i2c1: i2c1grp {
 			fsl,pins = <
-				MX6QDL_PAD_CSI0_DAT8__I2C1_SDA		0x4001b8b1
-				MX6QDL_PAD_CSI0_DAT9__I2C1_SCL		0x4001b8b1
+				MX6QDL_PAD_EIM_D21__I2C1_SCL		0x4001b8b1
+				MX6QDL_PAD_EIM_D28__I2C1_SDA		0x4001b8b1
 			>;
 		};
 
