@@ -5,10 +5,10 @@
 
 #include "imx6qdl-u-boot.dtsi"
 
-&usdhc3 {
+&usdhc4 {
 	u-boot,dm-spl;
 };
 
-&pinctrl_usdhc3 {
+&pinctrl_usdhc4 {
 	u-boot,dm-spl;
 };

@@ -14,7 +14,7 @@
 };
 
 &sata {
-	status = "okay";
+	status = "disabled";
 };
 
 &ipu1_csi1_from_mipi_vc1 {

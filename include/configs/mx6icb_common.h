@@ -18,6 +18,7 @@
 #define CONFIG_MXC_UART
 
 /* MMC Configs */
+/*	"mmcdev=" __stringify(CONFIG_SYS_MMC_ENV_DEV) "\0" \*/
 #define CONFIG_SYS_FSL_ESDHC_ADDR      0
 
 #define CONFIG_FEC_MXC
@@ -72,8 +73,9 @@
 	"dfu_alt_info=spl raw 0x400\0" \
 	"fdt_high=0xffffffff\0"	  \
 	"initrd_high=0xffffffff\0" \
-	"mmcdev=" __stringify(CONFIG_SYS_MMC_ENV_DEV) "\0" \
+	"mmcdev=2\0" \
 	"mmcpart=1\0" \
+	"mmcroot=" CONFIG_MMCROOT " rootwait rw\0" \
 	"finduuid=part uuid mmc ${mmcdev}:2 uuid\0" \
 	"update_sd_firmware=" \
 		"if test ${ip_dyn} = yes; then " \
